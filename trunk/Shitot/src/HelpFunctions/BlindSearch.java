@@ -1,14 +1,13 @@
 package HelpFunctions;
 import shitot1.Horner;
 
-
 /*
  * Blind Search finds the first range which defined the result s to the function f(x)=0.
  */
 
 /**
  *
- * @author shiran and Avi
+ * @author shiran  and  Avi
  */
 
 public class BlindSearch {
