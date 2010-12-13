@@ -22,8 +22,19 @@ public class Main {
     */
     public static void main(String[] args) {
  
-       
-   // ----------------------- Question 1.1 -------------------------- //
+
+       //  q1();
+
+        Q2 q2 = new Q2();
+
+        q2.calc();
+
+      //----------------------------------------------------------------- //
+    }
+
+    private static void q1() {
+
+           // ----------------------- Question 1.1 -------------------------- //
 
         double[] p1 = {64,-320,688,-832,620,-292,85,-14,1};
         double[] p2 = {19,-27,42,27,13,1};
@@ -32,19 +43,19 @@ public class Main {
 
         BlindSearch bs = new BlindSearch();
         bisection b=new bisection();
-        
+
         Pair p = bs.search(new Horner(p2),0,0.2);
         Pair s = bs.search(new Horner(p1),0,0.5);
         System.out.println("a =  " + s.getA() + "  b =    " + s.getB());
-        
+
        Pair bisect1 = b.calcBiSection(h1, 0.00000000005 ,s.getA() ,s.getB(), 100000);
       // Pair bisect2 = b.calcBiSection(h2, 0.00000000005 ,p.getA() ,p.getB(), 1000);
 
     //   System.out.println("f_a*f_b= " + h2.calcPX(p.getA()) * h2.calcPX(p.getB()) );
    //    System.out.println("X=  " + bisect2.getA());
     //   System.out.println("ans= " + h2.calcPX(bisect2.getA()));
-      
-     
+
+
        try {
 
             PrintWriter p1Afile = new PrintWriter(new FileWriter(new File("c:\\temp\\p1A.txt")));
@@ -67,7 +78,7 @@ public class Main {
                 p1AfileX.write(i + "\n");
                 p1BfileX.write(i + "\n");
             }
-            
+
             double from = p.getA();
             double to = p.getB();
             double delta = 0.01;
@@ -93,8 +104,6 @@ public class Main {
 
             System.out.println("ERROR");
        }
-
-      //----------------------------------------------------------------- //
     }
 
 }

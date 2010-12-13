@@ -5,24 +5,31 @@
 
 package shitot1;
 
+import HelpFunctions.*;
+
 /**
  *
  * @author shiran
  */
 public class Q2 {
 
-    double[] arr;
-    int index;
-    double tol;
+    public void calc(){
 
-    public Q2(double[] arr,int in, double tolerance){
-        this.arr = arr;
-        this.index = in;
-        this.tol = tolerance;
+       double tolXn = calcTol(0,4);
+       double tolYn = calcTol(-1,7);
+
+       Series xn = new Xn();
+       Series yn = new Yn();
+
+        Aitken aitken = new Aitken();
+
+        double limitXn = aitken.calcAitken(xn, tolXn);
+        double limitYn = aitken.calcAitken(yn, tolYn);
     }
 
-    public void calc(){
-        
+    private double calcTol(int e, int p) {
+
+        return 0.5*Math.pow(10, (e-p+1) );
     }
 
 }
