@@ -23,8 +23,17 @@ public class Q2 {
 
         Aitken aitken = new Aitken();
 
-        double limitXn = aitken.calcAitken(xn, tolXn);
-        double limitYn = aitken.calcAitken(yn, tolYn);
+        System.out.println("\nXn-Aitken\n=========");
+        double limitXnA = aitken.calcAitken(xn, tolXn);
+        System.out.println("\nYn-Aitken\n=========");
+        double limitYnA = aitken.calcAitken(yn, tolYn);
+
+        Richardson richardson = new Richardson();
+
+         System.out.println("\nXn-Richardson\n=============");
+        double limitXnR = richardson.calcRichardson(xn, tolXn, 2 );
+        System.out.println("\nYn-Richardson\n=============");
+        double limitYnR = richardson.calcRichardson(yn, tolYn, 2);
     }
 
     private double calcTol(int e, int p) {
