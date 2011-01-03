@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package shitot1;
 
@@ -9,11 +5,14 @@ import HelpFunctions.Function;
 import java.util.Vector;
 
 /**
- *
- * @author digmia
+ * This class represents the Newton Raphson algorithm
  */
 public class Newtonraphson {
 
+     /**
+     * this method calcultes the Xn member of the given function
+     * its accuracy is according to the given tolerance
+     */
     double calcNewtonraphson(Function f, double tol, double a, double b) {
 
         Vector<Double> X= new Vector<Double>();

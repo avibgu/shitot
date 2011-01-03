@@ -1,19 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package shitot1;
 
 import HelpFunctions.Series;
 import java.util.Vector;
 
 /**
- *
- * @author digmia
+ * This class represents the Richardson algorithm
  */
 public class Richardson {
 
+      /**
+     * this method calcultes the Xn member of the given series that
+     * its accuracy is according to the given tolerance
+     */
       public double calcRichardson(  Series f, double tol, double s ){
 
             Vector<Double> X = new Vector<Double>();
