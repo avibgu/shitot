@@ -17,7 +17,7 @@ public class Xn implements Series{
 
     public double getTheNextMember(double lastMember, int requiredMemberIndex) {
 
-        return lastMember * (1+1/Math.pow(requiredMemberIndex, 3));
+        return lastMember * (1+1/(Math.pow(requiredMemberIndex, 3)));
     }
 
 }
