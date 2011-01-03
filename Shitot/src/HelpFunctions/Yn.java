@@ -13,7 +13,7 @@ public class Yn implements Series {
 
     public double getTheFirstMember() {
 
-        return 0;
+        return 1;
     }
 
     public double getTheNextMember(double lastMember, int requiredMemberIndex) {

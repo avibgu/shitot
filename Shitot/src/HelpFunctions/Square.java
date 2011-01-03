@@ -24,4 +24,12 @@ public class Square implements Function{
         }
         return ans;
     }
+
+    public double CalculateDerivation(double x) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public double CalculateSecondDerivation(double x) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
