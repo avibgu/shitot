@@ -1,24 +1,15 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package shitot1;
 
 import HelpFunctions.Series;
 
 /**
- *
- * @author shiran and Avi
+ * This class represents the Aitken algorithm
  */
 public class Aitken {
 
     /**
-     *
-     * @param arr
-     * @param n
-     * @param tol
-     * @return the limit a (and changing arr to be the accelerated series)
+     * this method calcultes the Xn member of the given series that
+     * its accuracy is according to the given tolerance
      */
     public double calcAitken(  Series f, double tol ){
 
