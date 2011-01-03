@@ -1,13 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package HelpFunctions;
 
 /**
- *
- * @author digmia
+ * This is the polinom for part 2
  */
 public class Xn implements Series{
 
@@ -16,8 +10,6 @@ public class Xn implements Series{
     }
 
     public double getTheNextMember(double lastMember, int requiredMemberIndex) {
-
         return lastMember * (1+1/(Math.pow(requiredMemberIndex, 3)));
     }
-
 }
