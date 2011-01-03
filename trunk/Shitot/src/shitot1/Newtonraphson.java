@@ -61,6 +61,10 @@ public class Newtonraphson {
 
             System.out.println("i: " + j + ",   Ki: " + Ki);
         }
+
+        double K2 =.5*Math.abs(f.CalculateSecondDerivation(xi)/f.CalculateDerivation(xi)) ;
+
+         System.out.println("\nK2: " + K2 +"\n");
         
         return xi + epsilon;
     }
