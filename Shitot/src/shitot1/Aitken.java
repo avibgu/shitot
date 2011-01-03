@@ -28,21 +28,13 @@ public class Aitken {
 
         boolean cont = true;
 
-        System.out.print("DEBUG  ");
-
         double xi = f.getTheFirstMember();
         double xiPlus1 = f.getTheNextMember(xi, 1);
         double xiPlus2 = f.getTheNextMember(xiPlus1, 2);
 
-        double temp = 0.0;
-
-        System.out.print("the first n members: ");
-
         while ( cont  ){
 
             epsilon = (-Math.pow(xiPlus1-xi,2))/(xiPlus2-2*xiPlus1+xi);
-
-            System.out.print(" " + xi);
 
             if ( Math.abs(epsilon) <= tol )
                 cont = false;
@@ -50,16 +42,17 @@ public class Aitken {
             else{
 
                 i++;
-                temp = xiPlus1;
                 
                 xi = xiPlus1;
                 xiPlus1 = xiPlus2;
-                xiPlus2 = f.getTheNextMember(temp, i+2);
+                xiPlus2 = f.getTheNextMember(xiPlus2, i+2);
             }
         }
 
+        System.out.println("Xi,1     " + xi);
+        System.out.println("Aitken    error    " +  Math.abs(epsilon));
         System.out.println();
-
+        
         return xi+epsilon;
     }
 }

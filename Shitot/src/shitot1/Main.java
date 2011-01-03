@@ -21,13 +21,17 @@ public class Main {
     * @param args the command line arguments
     */
     public static void main(String[] args) {
- 
+  
 
        //  q1();
 
-        Q2 q2 = new Q2();
+        //   Q2 q2 = new Q2();
 
-        q2.calc();
+           //q2.calc();
+
+           Q3 q3 = new Q3();
+
+           q3.calc();
 
       //----------------------------------------------------------------- //
     }
@@ -48,13 +52,7 @@ public class Main {
         Pair s = bs.search(new Horner(p1),0,0.5);
         System.out.println("a =  " + s.getA() + "  b =    " + s.getB());
 
-       Pair bisect1 = b.calcBiSection(h1, 0.00000000005 ,s.getA() ,s.getB(), 100000);
-      // Pair bisect2 = b.calcBiSection(h2, 0.00000000005 ,p.getA() ,p.getB(), 1000);
-
-    //   System.out.println("f_a*f_b= " + h2.calcPX(p.getA()) * h2.calcPX(p.getB()) );
-   //    System.out.println("X=  " + bisect2.getA());
-    //   System.out.println("ans= " + h2.calcPX(bisect2.getA()));
-
+       Pair bisect1 = b.calcBiSection(h1, 0.00000000005 ,s.getA(), s.getB(), 100000);
 
        try {
 
