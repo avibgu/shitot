@@ -12,4 +12,8 @@ package HelpFunctions;
 public interface Function {
 
         public double Calculate(double x);
+
+        public double CalculateDerivation(double x);
+
+        public double CalculateSecondDerivation(double x);
 }
