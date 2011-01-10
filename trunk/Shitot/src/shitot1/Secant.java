@@ -81,6 +81,8 @@ public class Secant {
 
         double K2 =.5*Math.abs(f.CalculateSecondDerivation(xi)/f.CalculateDerivation(xi)) ;
 
+        K2 = Math.pow(K2, ((Math.sqrt(5)-1)/2));
+
          System.out.println("\nK2: " + K2 +"\n");
 
         return xi + epsilon;
