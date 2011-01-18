@@ -56,6 +56,7 @@ public class Secant {
             epsilon = xi-xiMinus1;
 
             X.add(xi);
+        //    System.out.println(epsilon);
 
              if ( Math.abs(epsilon) <= tol ) break;
 
@@ -76,14 +77,12 @@ public class Secant {
 
             Ki = Math.abs(deltaXi) /  Math.pow(Math.abs(deltaXiMinus1), r);
 
-            System.out.println("i: " + j + ",   Ki: " + Ki);
+            System.out.println(Ki);
         }
 
-        double K2 =.5*Math.abs(f.CalculateSecondDerivation(xi)/f.CalculateDerivation(xi)) ;
-
-        K2 = Math.pow(K2, ((Math.sqrt(5)-1)/2));
-
-         System.out.println("\nK2: " + K2 +"\n");
+        double K2 =0.5*Math.abs(f.CalculateSecondDerivation(xi)/f.CalculateDerivation(xi)) ;
+        double test = 0.5 * (Math.sqrt(5)-1);
+         System.out.println("\nK2: " + Math.pow(K2,test) +"\n");
 
         return xi + epsilon;
      }
