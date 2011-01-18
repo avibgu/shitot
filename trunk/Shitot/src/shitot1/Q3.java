@@ -24,16 +24,17 @@ class Q3 {
             Secant secant = new Secant();
 
             Function f1 = new funcOf3a();
-            Pair p1 = bs.search(f1, 0.1, 10);
+            Pair p1 = bs.search(f1,2, 1);
+            System.out.println("A= " + p1.getA() + "  B= " + p1.getB());
             double tol1 = calcTol(-1, 10);
 
             System.out.println("\nNewtonraphson\n=============");
             double limitF1 = newtonraphson.calcNewtonraphson( f1, tol1, p1.getA(), p1.getB() );
 
             Function f2 = new funcOf3b();
-            Pair p2 = bs.search(f2, 0.0001, 2.0);
+            Pair p2 = bs.search(f2, 2, 0.4);
             double tol2 = calcTol(-1, 10);
-
+            System.out.println("A= " + p2.getA() + "  B= " + p2.getB());
             System.out.println("\nSecant\n======");
             double limitF2 = secant.calcSecant( f2, tol2, p2.getA(), p2.getB() );
        }

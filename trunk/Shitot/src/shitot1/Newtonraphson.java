@@ -39,6 +39,7 @@ public class Newtonraphson {
 
             epsilon = - f.Calculate(xi)/f.CalculateDerivation(xi);
 
+           // System.out.println(epsilon);
              if ( Math.abs(epsilon) <= tol ) break;
 
             i++;
@@ -58,12 +59,12 @@ public class Newtonraphson {
 
             Ki = Math.abs(deltaXi) /  Math.pow(Math.abs(deltaXiMinus1), r);
 
-            System.out.println("i: " + j + ",   Ki: " + Ki);
+          //  System.out.println(Ki);
         }
 
         double K2 =.5*Math.abs(f.CalculateSecondDerivation(xi)/f.CalculateDerivation(xi)) ;
 
-         System.out.println("\nK2: " + K2 +"\n");
+       //  System.out.println("\nK2: " + K2 +"\n");
         
         return xi + epsilon;
     }
